@@ -5,7 +5,7 @@ while i <= 9:
     if i == 9 and j == 9:
         print("{}{}".format(i, j))
         break
-    else: 
+    else:
         print("{}{}, ".format(i, j), end="")
         if j == 9:
             i = i + 1
