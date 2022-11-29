@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-for i in range(0, 10):
-    for j in range(0, 10):
-        if i == 9 and j == 9:
-            print("{}{}".format(i, j))
+i = 0
+j = 0
+while i <= 9:
+    if i == 9 and j == 9:
+        print("{}{}".format(i, j))
+        break
+    else: 
+        print("{}{}, ".format(i, j), end="")
+        if j == 9:
+            i = i + 1
+            j = 0
         else:
-            print("{}{}, ".format(i, j), end="")
+            j = j + 1
