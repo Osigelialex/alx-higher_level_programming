@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
+max_integer = __import__('9-max_integer').max_integer
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
+my_list = [1, 90, 2, 13, 34, 5, -13, 3]
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
