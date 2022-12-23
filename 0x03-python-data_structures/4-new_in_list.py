@@ -2,8 +2,8 @@
 def new_in_list(my_list, idx, element):
     new_list = []
     for i in my_list:
-        if i == idx:
-            new_list[i] = element
+        if my_list.index(i) == idx:
+            new_list.append(element)
         else:
-            new_list[i] = my_list[i]
+            new_list.append(i)
     return new_list
