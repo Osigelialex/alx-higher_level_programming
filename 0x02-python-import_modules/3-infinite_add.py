@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-def add():
+if __name__ == "__main__":
+    from sys import argv
     length = len(argv)
     sum = 0
 
@@ -8,7 +9,3 @@ def add():
         sum += int(argv[i])
     
     print("{:d}".format(sum))
-
-if __name__ == "__main__":
-    from sys import argv
-    add()
