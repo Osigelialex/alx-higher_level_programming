@@ -10,7 +10,7 @@ def print_arguments():
         print("{:d}: {:s}".format(length, argv[length]))
     if length > 1:
         print("{:d} arguments:".format(length))
-        for i in range(1, length):
+        for i in range(1, length + 1):
             print("{:d}: {:s}".format(i, argv[i]))
 
 if __name__ == "__main__":
