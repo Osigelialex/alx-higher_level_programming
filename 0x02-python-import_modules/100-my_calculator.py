@@ -10,14 +10,11 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     else:
-        a = argv[1]
-        b = argv[3]
-
         if argv[2] == "/":
-            print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+            print("{:d} / {:d} = {:d}".format(argv[1], argv[3], div(argv[1], argv[3])))
         if argv[2] == "*":
-            print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+            print("{:d} * {:d} = {:d}".format(argv[1], argv[3], mul(argv[1], argv[3])))
         if argv[2] == "-":
-            print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+            print("{:d} - {:d} = {:d}".format(argv[1], argv[3], sub(argv[1], argv[3])))
         if argv[2] == "+":
-            print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+            print("{:d} + {:d} = {:d}".format(argv[1], argv[3], add(argv[1], argv[3])))
