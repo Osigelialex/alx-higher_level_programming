@@ -1,17 +1,13 @@
 #!/usr/bin/python3
-complex_delete = __import__('102-complex_delete').complex_delete
-print_sorted_dictionary = \
-    __import__('6-print_sorted_dictionary').print_sorted_dictionary
+square_matrix_map = \
+    __import__('101-square_matrix_map').square_matrix_map
 
-a_dictionary = {'lang': "C", 'track': "Low", 'pref': "C", 'ids': [1, 2, 3]}
-new_dict = complex_delete(a_dictionary, 'C')
-print_sorted_dictionary(a_dictionary)
-print("--")
-print_sorted_dictionary(new_dict)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-print("--")
-print("--")
-new_dict = complex_delete(a_dictionary, 'c_is_fun')
-print_sorted_dictionary(a_dictionary)
-print("--")
-print_sorted_dictionary(new_dict)
+new_matrix = square_matrix_map(matrix)
+print(new_matrix)
+print(matrix)
