@@ -4,9 +4,9 @@
 
 
 class Rectangle:
+    """Represent a rectangle"""
     number_of_instances = 0
 
-    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
         """Initialize a rectangle
         Args:
