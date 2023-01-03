@@ -6,6 +6,7 @@
 class Rectangle:
     """Represent a rectangle"""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a rectangle
@@ -56,18 +57,17 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """Return the printable representation of the Rectangle.
-        Represents the rectangle with the # character.
-        """
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+        '''method: __str__
+        return: nice string representation of rectangle
+        '''
+        ret_str = ""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        for idx in range(self.__height):
+            ret_str += str(self.print_symbol) * self.width
+            if idx + 1 < self.__height:
+                ret_str += '\n'
+        return ret_str
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
