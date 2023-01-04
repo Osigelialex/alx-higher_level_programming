@@ -65,7 +65,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() == rect_2.area():
             return rect_1
-        return rect_1 if rect_1 > rect_2 else rect_2
+        return rect_1 if rect_1.area() > rect_2.area() else rect_2
 
     def __str__(self):
         '''method: __str__
