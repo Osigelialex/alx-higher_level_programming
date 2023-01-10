@@ -8,4 +8,4 @@ import json
 
 def from_json_string(my_str):
     """module from_json_string"""
-    return my_str.loads()
+    return json.loads(my_str)
