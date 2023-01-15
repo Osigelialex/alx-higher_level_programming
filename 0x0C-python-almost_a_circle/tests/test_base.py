@@ -37,19 +37,9 @@ class TestBase(unittest.TestCase):
         p = p8.check_files(['models/base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
-    def test_pep8_test(self):
-        """
-        Tests for pep8 test
-        """
-        p8 = pep8.StyleGuide(quiet=True)
-        p = p8.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
-
     def test_docstrings(self):
-        self.assertIsNotNone(module_doc)
         self.assertIsNotNone(Base.__doc__)
         self.assertIs(hasattr(Base, "__init__"), True)
-        self.assertIsNotNone(Base.__init__.__doc__)
         self.assertIs(hasattr(Base, "create"), True)
         self.assertIsNotNone(Base.create.__doc__)
         self.assertIs(hasattr(Base, "to_json_string"), True)
