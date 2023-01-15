@@ -50,7 +50,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """ returns the width of the rectangle"""
-        return __width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -69,7 +69,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """returns the height of the rectangle"""
-        return __height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -149,13 +149,36 @@ class Rectangle(Base):
         h = self.__height
         return f"[Rectangle] ({i}) {x}/{y} - {w}/{h}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Parameter
         --------
         args : varying number of arguments
             used to update the attributes of the rectangle
+        kwargs : varying number of key word arguments
+            used to update the attributes of the rectangle
         """
-        
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
-
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of Rectangle
+        """
+        return {
+            "x" : getattr(self, "x"),
+            "y" : getattr(self, "y"),
+            "id" : getattr(self, "id"),
+            "height" : getattr(self, "height"),
+            "width" : getattr(self, "width")
+            }
