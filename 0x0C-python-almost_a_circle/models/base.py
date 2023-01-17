@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-
+"""
+Creating the base class for other shapes
+"""
 import json
-
-"""Base class"""
 
 
 class Base:
-    """Initialize base class"""
+    """
+     This class will manage the id attribute for all the classes.
+        Arguments:
+            @id: The id for a specific instance.
+    """
 
     __nb_objects = 0
 
