@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+A square class built on top of base class
+"""
 from models.rectangle import Rectangle
 
 
