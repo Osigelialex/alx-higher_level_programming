@@ -78,9 +78,9 @@ class Base:
         try:
             with open(file_name, "r") as file:
                 data = cls.from_json_string(file.read())
-        except:
+        except fileNotFoundError:
             return []
-        
+
         instances = []
 
         for instance in data:
