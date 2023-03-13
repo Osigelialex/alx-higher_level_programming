@@ -10,7 +10,7 @@ if (isNaN(value)) {
 if (value > 0) {
   for (let i = 0; i < value; i++) {
     for (let j = 0; j < value; j++) {
-      square += 'x';
+      square += 'X';
     }
     if (i !== value - 1) {
       square += '\n';
