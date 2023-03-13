@@ -5,8 +5,8 @@ function second (nums) {
     return (0);
   }
 
-  let max = Number.NEGATIVE_INFINITY;
-  let second = Number.NEGATIVE_INFINITY;
+  let max = nums[2];
+  let second = nums[3];
   const length = nums.length;
 
   for (let i = 2; i < length; i++) {
