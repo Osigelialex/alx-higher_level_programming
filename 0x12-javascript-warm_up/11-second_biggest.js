@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function second(nums) {
+function second (nums) {
   if (nums.length < 4) {
     return (0);
   }
@@ -18,7 +18,7 @@ function second(nums) {
       second = nums[i];
     }
   }
-  return(second);
+  return (second);
 }
 
 console.log(second(process.argv));
