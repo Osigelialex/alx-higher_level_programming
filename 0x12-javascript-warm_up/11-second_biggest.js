@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function second(nums) {
-  if (length < 4) {
+  if (nums.length < 4) {
     return (0);
   }
 
