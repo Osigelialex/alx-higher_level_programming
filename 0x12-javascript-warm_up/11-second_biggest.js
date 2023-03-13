@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
-const nums = process.argv;
-const length = process.argv.length - 2;
+function second(nums) {
+  if (length < 4) {
+    return (0);
+  }
 
-if (length < 4) {
-  console.log(0);
-} else {
   let max = Number.NEGATIVE_INFINITY;
   let second = Number.NEGATIVE_INFINITY;
+  const length = nums.length;
 
   for (let i = 2; i < length; i++) {
     if (nums[i] > max) {
@@ -18,5 +18,7 @@ if (length < 4) {
       second = nums[i];
     }
   }
-  console.log(second);
+  return(second);
 }
+
+console.log(second(process.argv));
