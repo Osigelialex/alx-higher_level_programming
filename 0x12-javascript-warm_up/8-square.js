@@ -2,10 +2,10 @@
 
 const process = require('process');
 const value = process.argv[2];
-
 if (isNaN(value)) {
   console.log('Missing Size');
-} else {
+}
+if (value > 0){
   for (let i = 0; i < value; i++) {
     console.log('x'.repeat(value));
   }
