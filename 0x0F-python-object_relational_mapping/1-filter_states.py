@@ -5,8 +5,8 @@ import MySQLdb
 from sys import argv
 
 '''
-a script that lists all states
-from the database
+lists all states with starting name with N
+from the database hbtn_0e_0_usa
 '''
 if __name__ == "__main__":
     con = MySQLdb.connect(
@@ -18,5 +18,3 @@ if __name__ == "__main__":
     db = cursor.fetchall()
     for i in db:
         print(i)
-    cursor.close()
-    db.close()
