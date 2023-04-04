@@ -11,10 +11,6 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     email_address = sys.argv[2]
-    email = {
-        "to": email_address,
-        "text": f"your email is: {email_address}"
-    }
-
-    response = requests.post(url, json=email)
+    email = f"Your email is: {email_address}"
+    response = requests.post(url, params=email)
     print(response)
