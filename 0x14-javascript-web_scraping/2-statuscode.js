@@ -4,5 +4,9 @@ const request = require('request');
 
 const PATH = process.argv[2];
 request(PATH, (error, response, body) => {
-  console.log('code:', response && response.statusCode);
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('code:', response && response.statusCode);
+  }
 });
