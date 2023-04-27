@@ -2,9 +2,9 @@
 
 const request = require('request');
 
-const movie_id = process.argv[2]
+const movieId = process.argv[2];
 
-const API = `https://swapi-api.alx-tools.com/api/films/${movie_id}`
+const API = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 const options = {
   url: API,
