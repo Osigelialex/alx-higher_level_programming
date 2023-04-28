@@ -24,8 +24,8 @@ request(options, (error, response, body) => {
       }
 
       console.log(number);
-    } catch(error) {
-        console.error(error);
-      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 });
